@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.env
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+streamlit.log
+streamlit_err.log
+
+# Data (keep uploads and chroma_db)
+data/workspace_db.json
+data/knowledge_meta.json
+data/md5.text
+!data/uploads/
+!data/chroma_db/
+!data/chat_history/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.bak

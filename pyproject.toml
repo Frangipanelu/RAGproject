@@ -1,0 +1,18 @@
+[project]
+name = "rag-project"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "streamlit",
+    "langchain-core",
+    "langchain-community",
+    "langchain-openai",
+    "langchain-chroma",
+    "chromadb",
+    "pypdf",
+    "python-docx",
+    "langchain-text-splitters",
+]
+
+[tool.uv]
+index-url = "https://pypi.tuna.tsinghua.edu.cn/simple/"

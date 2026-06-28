@@ -1,0 +1,173 @@
+{
+  "workspaces": {
+    "ws_fec9a6c0da15": {
+      "id": "ws_fec9a6c0da15",
+      "name": "技术学习",
+      "description": "",
+      "icon": "💼",
+      "created_at": "2026-06-26 22:31:29"
+    },
+    "ws_8a7c2631e994": {
+      "id": "ws_8a7c2631e994",
+      "name": "工作",
+      "description": "",
+      "icon": "📚",
+      "created_at": "2026-06-26 22:32:43"
+    },
+    "ws_3ad035f1461e": {
+      "id": "ws_3ad035f1461e",
+      "name": "学习",
+      "description": "",
+      "icon": "🚀",
+      "created_at": "2026-06-27 14:11:19"
+    },
+    "ws_8815026b0c28": {
+      "id": "ws_8815026b0c28",
+      "name": "分类测试",
+      "description": "分类功能测试",
+      "icon": "📂",
+      "created_at": "2026-06-28 01:11:01"
+    },
+    "ws_d4190498ea47": {
+      "id": "ws_d4190498ea47",
+      "name": "文档测试",
+      "description": "文档上传测试",
+      "icon": "📄",
+      "created_at": "2026-06-28 01:11:01"
+    },
+    "ws_52f66837c822": {
+      "id": "ws_52f66837c822",
+      "name": "RAG 测试",
+      "description": "RAG 检索测试",
+      "icon": "🔍",
+      "created_at": "2026-06-28 01:11:02"
+    },
+    "ws_491914921893": {
+      "id": "ws_491914921893",
+      "name": "完整流程测试",
+      "description": "端到端测试",
+      "icon": "🚀",
+      "created_at": "2026-06-28 01:11:03"
+    },
+    "ws_90d3a9a3607c": {
+      "id": "ws_90d3a9a3607c",
+      "name": "分类测试",
+      "description": "分类功能测试",
+      "icon": "📂",
+      "created_at": "2026-06-28 01:12:06"
+    },
+    "ws_b8bf7e82965e": {
+      "id": "ws_b8bf7e82965e",
+      "name": "文档测试",
+      "description": "文档上传测试",
+      "icon": "📄",
+      "created_at": "2026-06-28 01:12:06"
+    },
+    "ws_6b7415327a8c": {
+      "id": "ws_6b7415327a8c",
+      "name": "RAG 测试",
+      "description": "RAG 检索测试",
+      "icon": "🔍",
+      "created_at": "2026-06-28 01:12:07"
+    },
+    "ws_ba4030f7b11e": {
+      "id": "ws_ba4030f7b11e",
+      "name": "完整流程测试",
+      "description": "端到端测试",
+      "icon": "🚀",
+      "created_at": "2026-06-28 01:12:07"
+    }
+  },
+  "categories": {
+    "cat_157d9086fea0": {
+      "id": "cat_157d9086fea0",
+      "name": "AI",
+      "parent_id": null,
+      "workspace_id": "ws_8a7c2631e994",
+      "path": "AI",
+      "level": 0,
+      "created_at": "2026-06-26 22:33:11"
+    },
+    "cat_fb8f4e6ec78e": {
+      "id": "cat_fb8f4e6ec78e",
+      "name": "RAG",
+      "parent_id": "cat_157d9086fea0",
+      "workspace_id": "ws_8a7c2631e994",
+      "path": "AI/RAG",
+      "level": 1,
+      "created_at": "2026-06-26 22:36:01"
+    },
+    "cat_f307c899204e": {
+      "id": "cat_f307c899204e",
+      "name": "技术",
+      "parent_id": null,
+      "workspace_id": "ws_d4190498ea47",
+      "path": "技术",
+      "level": 0,
+      "created_at": "2026-06-28 01:11:01"
+    },
+    "cat_ceb3724418c8": {
+      "id": "cat_ceb3724418c8",
+      "name": "技术",
+      "parent_id": null,
+      "workspace_id": "ws_52f66837c822",
+      "path": "技术",
+      "level": 0,
+      "created_at": "2026-06-28 01:11:02"
+    },
+    "cat_8129bb352cb8": {
+      "id": "cat_8129bb352cb8",
+      "name": "AI 学习",
+      "parent_id": null,
+      "workspace_id": "ws_491914921893",
+      "path": "AI 学习",
+      "level": 0,
+      "created_at": "2026-06-28 01:11:03"
+    },
+    "cat_d10841819934": {
+      "id": "cat_d10841819934",
+      "name": "技术",
+      "parent_id": null,
+      "workspace_id": "ws_b8bf7e82965e",
+      "path": "技术",
+      "level": 0,
+      "created_at": "2026-06-28 01:12:06"
+    },
+    "cat_634b05007436": {
+      "id": "cat_634b05007436",
+      "name": "技术",
+      "parent_id": null,
+      "workspace_id": "ws_6b7415327a8c",
+      "path": "技术",
+      "level": 0,
+      "created_at": "2026-06-28 01:12:07"
+    },
+    "cat_982c9c8bd0a5": {
+      "id": "cat_982c9c8bd0a5",
+      "name": "AI 学习",
+      "parent_id": null,
+      "workspace_id": "ws_ba4030f7b11e",
+      "path": "AI 学习",
+      "level": 0,
+      "created_at": "2026-06-28 01:12:07"
+    },
+    "cat_69c87c14dcdc": {
+      "id": "cat_69c87c14dcdc",
+      "name": "知识库",
+      "parent_id": null,
+      "workspace_id": "ws_3ad035f1461e",
+      "path": "知识库",
+      "level": 0,
+      "created_at": "2026-06-29 02:02:41"
+    },
+    "cat_e76df95fd629": {
+      "id": "cat_e76df95fd629",
+      "name": "RAG",
+      "parent_id": "cat_69c87c14dcdc",
+      "workspace_id": "ws_3ad035f1461e",
+      "path": "知识库/RAG",
+      "level": 1,
+      "created_at": "2026-06-29 02:02:57"
+    }
+  }
+}
