@@ -1,32 +1,43 @@
+"""
+项目配置文件
+敏感信息（API 密钥）已从 .env 文件加载，不存储在代码中
+"""
+import os
+from pathlib import Path
+
+# 加载环境变量
+from dotenv import load_dotenv
+load_dotenv()
+
+# 路径配置
 md5_path = "./data/md5.text"
 meta_db_path = "./data/knowledge_meta.json"
 
-
-# Chroma
+# Chroma 配置
 collection_name = "personal_kb"
 persist_directory = "./data/chroma_db"
-
 
 # 文件上传配置
 ALLOWED_EXTENSIONS = ["md", "pdf", "docx", "txt", "html", "csv", "xlsx", "pptx", "json", "yaml", "yml"]
 
-# 文本分割
-chunk_size = 500                # 文本分割块大小（BGE模型最大支持512 tokens，约1500字符）
+# 文本分割配置
+chunk_size = 500                # 文本分割块大小（BGE 模型最大支持 512 tokens，约 1500 字符）
 chunk_overlap = 50              # 块重叠字符数
 separators = ["\n\n", "\n", "。", "！", "？", ".", "!", "?", " ", ""]
 max_split_char_number = 500     # 文本分割的阈值
-max_embedding_chars = 1500     # embedding 单次最大字符数（BGE限制）
+max_embedding_chars = 1500     # embedding 单次最大字符数（BGE 限制）
 
-# 检索
+# 检索配置
 retrieve_top_k = 5                  # 检索返回匹配的文档数量
 
+# SiliconFlow API 配置（从环境变量读取）
+SILICONFLOW_BASE_URL = os.getenv("SILICONFLOW_BASE_URL", "https://api.siliconflow.cn/v1")
+SILICONFLOW_API_KEY = os.getenv("SILICONFLOW_API_KEY")
 
-# SiliconFlow API 配置
-SILICONFLOW_BASE_URL = "https://api.siliconflow.cn/v1"
-SILICONFLOW_API_KEY = "sk-pxhecitcvtbgzcdqtifrknqjkdeyzfktewocsidmzesekoxy"
+if not SILICONFLOW_API_KEY:
+    raise ValueError("❌ 未找到 SILICONFLOW_API_KEY，请在 .env 文件中设置")
 
-# 禁用代理（避免SSL握手失败）
-import os
+# 禁用代理（避免 SSL 握手失败）
 os.environ.pop("HTTP_PROXY", None)
 os.environ.pop("HTTPS_PROXY", None)
 os.environ.pop("http_proxy", None)
@@ -34,7 +45,7 @@ os.environ.pop("https_proxy", None)
 os.environ["NO_PROXY"] = "*"
 os.environ["no_proxy"] = "*"
 
-# 模型
+# 模型配置
 embedding_model_name = "BAAI/bge-large-zh-v1.5"
 chat_model_name = "nex-agi/Nex-N2-Pro"
 
@@ -46,16 +57,17 @@ def get_embeddings():
         model=embedding_model_name,
         openai_api_key=SILICONFLOW_API_KEY,
         openai_api_base=SILICONFLOW_BASE_URL,
-        check_embedding_ctx_length=False,  # 避免LangChain把input包成二维数组
-        chunk_size=1,  # 逐条发送，SiliconFlow BGE模型不支持批处理格式
+        check_embedding_ctx_length=False,  # 避免 LangChain 把 input 包成二维数组
+        chunk_size=1,  # 逐条发送，SiliconFlow BGE 模型不支持批处理格式
     )
 
-# 会话
+
+# 会话配置
 session_config = {
-        "configurable": {
-            "session_id": "user_001",
-        }
+    "configurable": {
+        "session_id": "user_001",
     }
+}
 
 # 自动分类规则（关键词 → 分类）
 AUTO_CATEGORIES = {
